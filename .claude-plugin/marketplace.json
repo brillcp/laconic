@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "laconic",
+  "description": "Laconic mode. Spartan brevity. Fewer tokens than caveman.",
+  "owner": { "name": "VG" },
+  "plugins": [
+    {
+      "name": "laconic",
+      "description": "Terse responses. Drop filler. Code stays normal.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

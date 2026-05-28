@@ -1,0 +1,18 @@
+{
+  "name": "laconic",
+  "description": "Laconic mode. Spartan brevity. Even fewer tokens than caveman.",
+  "author": { "name": "VG" },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ${CLAUDE_PLUGIN_ROOT}/hooks/activate.js",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
