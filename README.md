@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/github/license/brillcp/laconic)](/LICENSE)
 ![stars](https://img.shields.io/github/stars/brillcp/laconic?style=social)
 
-Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Fewer tokens than [🪨](https://github.com/JuliusBrussee/caveman).
+Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Inspired by [🪨 caveman](https://github.com/JuliusBrussee/caveman) — same goal, measured savings (see [Benchmarks](#benchmarks)).
 
 ## How it works
 
