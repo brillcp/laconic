@@ -1,4 +1,4 @@
-# laconic
+# Laconic 🪙
 
 Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Even fewer tokens than [caveman](https://github.com/JuliusBrussee/caveman).
 
