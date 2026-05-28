@@ -9,8 +9,7 @@ Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Fewer token
 ## How it works
 
 - `SessionStart` hook injects a short style rule each session.
-- `/laconic` slash command (skill) enforces hard caps: ≤30 words or ≤5 lines per reply, no preamble, no headers, no trailing summaries.
-- Code, commits, and security warnings stay normal prose.
+- `/laconic` slash command (skill) enforces hard caps: ≤20 words or ≤3 lines per reply, no preamble, no headers, no trailing summaries.
 
 ## Install
 
@@ -36,19 +35,21 @@ Then `/reload-plugins` (or restart Claude Code).
 
 Measured output tokens for 10 language-agnostic prompts. Claude Code, Opus 4.7.
 
-| # | Prompt                                                  | Off   | On   | Saved |
-| - | ------------------------------------------------------- | ----- | ---- | ----- |
-| 1 | Mutex vs semaphore                                      | 974   | 571  | 41%   |
-| 2 | TCP vs UDP                                              | 1100  | 721  | 34%   |
-| 3 | Binary search time complexity                           | 1019  | 528  | 48%   |
-| 4 | JWT authentication end to end                           | 1057  | 620  | 41%   |
-| 5 | REST vs GraphQL tradeoffs                               | 1192  | 473  | 60%   |
-| 6 | CAP theorem                                             | 1294  | 631  | 51%   |
-| 7 | Processes vs threads                                    | 1196  | 506  | 57%   |
-| 8 | HTTPS handshake                                         | 1313  | 510  | 61%   |
-| 9 | Big O / Theta / Omega                                   | 1115  | 597  | 46%   |
-| 10| Dependency injection                                    | 961   | 548  | 42%   |
-|   | **Total**                                               | 11221 | 5705 | **49%** |
+| #  | Prompt                        | Off   | On   | Saved |
+| -- | ----------------------------- | ----- | ---- | ----- |
+| 1  | Mutex vs semaphore            | 773   | 488  | 36%   |
+| 2  | TCP vs UDP                    | 1510  | 538  | 64%   |
+| 3  | Binary search time complexity | 1382  | 427  | 69%   |
+| 4  | JWT authentication end to end | 957   | 549  | 42%   |
+| 5  | REST vs GraphQL tradeoffs     | 1039  | 540  | 48%   |
+| 6  | CAP theorem                   | 851   | 1103 | -29%  |
+| 7  | Processes vs threads          | 1015  | 542  | 46%   |
+| 8  | HTTPS handshake               | 937   | 557  | 40%   |
+| 9  | Big O / Theta / Omega         | 823   | 564  | 31%   |
+| 10 | Dependency injection          | 885   | 527  | 40%   |
+|    | **Total**                     | 10172 | 5835 | **42%** |
+
+Note: single-run results have variance (see prompt 6). Multi-run median would be more stable.
 
 ### Reproduce
 
