@@ -22,6 +22,7 @@ Then `/reload-plugins` (or restart Claude Code).
 
 - `/laconic <prompt>` — one-shot terse reply
 - Or say "laconic", "terse", "brief" — skill auto-activates
+- `/laconic:audit` — list enabled plugins, flag unused ones, prompt before disabling to cut more tokens
 
 ## Update
 
