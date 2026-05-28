@@ -8,8 +8,9 @@ Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Inspired by
 
 ## How it works
 
-- `/laconic` slash command (skill) enforces hard caps: ≤20 words or ≤3 lines per reply, no preamble, no headers, no trailing summaries.
-- Only active when invoked — no per-session token cost.
+- `SessionStart` hook (bash) injects the rule once per session — laconic mode auto-active.
+- `/laconic` skill reinforces caps if needed: ≤20 words or ≤3 lines, no preamble, no headers, no trailing summaries.
+- Exit with `stop laconic` or `normal`.
 
 ## Install
 
@@ -22,8 +23,22 @@ Then `/reload-plugins` (or restart Claude Code).
 
 ## Use
 
-- `/laconic <prompt>` — one-shot terse reply
-- `/laconic:audit` — list enabled plugins, flag unused ones, prompt before disabling to cut more tokens
+- `/laconic <prompt>` — reinforce mode mid-session
+- `/laconic:stats` — estimate tokens saved this session
+- `/laconic:audit` — list enabled plugins, flag unused ones, prompt before disabling
+
+## Statusline indicator
+
+Optional. Add to `~/.claude/settings.json`:
+
+```json
+"statusLine": {
+  "type": "command",
+  "command": "~/.claude/plugins/cache/laconic/laconic/<sha>/statusline/statusline.sh"
+}
+```
+
+Shows `🪙 LACONIC` in the status bar while plugin is active.
 
 ## Update
 
