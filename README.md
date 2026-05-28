@@ -8,8 +8,8 @@ Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Inspired by
 
 ## How it works
 
-- `SessionStart` hook injects a short style rule each session.
 - `/laconic` slash command (skill) enforces hard caps: ≤20 words or ≤3 lines per reply, no preamble, no headers, no trailing summaries.
+- Only active when invoked — no per-session token cost.
 
 ## Install
 

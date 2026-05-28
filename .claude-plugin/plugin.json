@@ -1,6 +1,6 @@
 {
   "name": "laconic",
-  "description": "Laconic mode. Spartan brevity. Even fewer tokens than caveman.",
+  "description": "Laconic mode. Spartan brevity. Auto-active per session.",
   "author": { "name": "VG" },
   "hooks": {
     "SessionStart": [
@@ -8,7 +8,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node ${CLAUDE_PLUGIN_ROOT}/hooks/activate.js",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/activate.sh",
             "timeout": 5
           }
         ]

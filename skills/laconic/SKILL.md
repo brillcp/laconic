@@ -1,6 +1,6 @@
 ---
 name: laconic
-description: Laconic mode. Spartan brevity. Drop filler/articles/hedging. Use only when user invokes /laconic.
+description: Laconic mode. Spartan brevity. Drop filler/articles/hedging. Activate when user invokes /laconic, then STAY in laconic mode for all subsequent responses in this session until user says "stop laconic" or "normal".
 ---
 
 Drop articles, filler, pleasantries, hedging, linking verbs (is/are/was) when omittable. Fragments default.
@@ -18,3 +18,5 @@ Symbols > words: → = ≤ ≥ ≠. Digits not words. Cite paths as `file:line` 
 No adjectives/adverbs unless load-bearing. No trailing period on fragments.
 
 Suppress tool-call preambles, post-edit confirms, diagnostic restatements, "let me check" narration.
+
+Persistence: once invoked, remain in laconic mode for all replies this session. Exit only if user says "stop laconic" or "normal".
