@@ -15,7 +15,7 @@ Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Fewer token
 ## Install
 
 ```sh
-/plugin marketplace add <your-username>/laconic
+/plugin marketplace add brillcp/laconic
 /plugin install laconic@laconic
 ```
 
