@@ -1,0 +1,10 @@
+Explain the difference between a mutex and a semaphore.
+Compare TCP and UDP. When would you choose each?
+What is the time complexity of binary search and why?
+Explain how JWT authentication works end to end.
+What are the tradeoffs between REST and GraphQL?
+Explain CAP theorem.
+What is the difference between processes and threads?
+How does HTTPS establish a secure connection?
+Explain Big O, Big Theta, and Big Omega notation.
+What is dependency injection and why use it?

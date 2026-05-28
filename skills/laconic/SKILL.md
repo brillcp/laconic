@@ -1,6 +1,6 @@
 ---
 name: laconic
-description: Laconic mode. Spartan brevity. Drop filler/articles/hedging. Use when user says "laconic", "terse", "brief", "fewer tokens", or invokes /laconic.
+description: Laconic mode. Spartan brevity. Drop filler/articles/hedging. Use only when user invokes /laconic.
 ---
 
 Drop articles, filler, pleasantries, hedging. Fragments OK.
