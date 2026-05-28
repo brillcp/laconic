@@ -1,14 +1,8 @@
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fa99.svg" width="120" alt="coin">
-</p>
+# [Laconic 🪙](https://en.wikipedia.org/wiki/Laconic_phrase)
 
-<h1 align="center"><a href="https://en.wikipedia.org/wiki/Laconic_phrase">Laconic</a></h1>
-
-<p align="center">
-  <a href="/LICENSE"><img src="https://img.shields.io/github/license/brillcp/laconic" alt="license"></a>
-  <img src="https://img.shields.io/github/v/release/brillcp/laconic" alt="release">
-  <img src="https://img.shields.io/github/stars/brillcp/laconic?style=social" alt="stars">
-</p>
+![release](https://img.shields.io/github/v/release/brillcp/laconic)
+[![license](https://img.shields.io/github/license/brillcp/laconic)](/LICENSE)
+![stars](https://img.shields.io/github/stars/brillcp/laconic?style=social)
 
 Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Fewer tokens than [🪨](https://github.com/JuliusBrussee/caveman).
 
