@@ -1,5 +1,5 @@
 <p align="center">
-  <span style="font-size: 96px">🪙</span>
+  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fa99.svg" width="120" alt="coin">
 </p>
 
 <h1 align="center"><a href="https://en.wikipedia.org/wiki/Laconic_phrase">Laconic</a></h1>
@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/github/stars/brillcp/laconic?style=social" alt="stars">
 </p>
 
-Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Even fewer tokens than [caveman](https://github.com/JuliusBrussee/caveman).
+Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Fewer tokens than [🪨](https://github.com/JuliusBrussee/caveman).
 
 ## How it works
 
