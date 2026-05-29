@@ -60,7 +60,7 @@ Optional. Add to `~/.claude/settings.json`:
 }
 ```
 
-Shows `🪙 LACONIC · ~N tokens saved` live in the status bar — counter reads the session transcript and applies a `1.74` expansion factor (measured on earlier Opus runs) to estimate savings vs normal mode. The factor varies by model (Haiku is already concise, so its real factor is closer to 1.3); re-run the benchmark with higher `RUNS` to update.
+Shows `🪙 LACONIC · ~N tokens saved` live in the status bar — counter reads the session transcript and applies a `1.74` expansion factor to estimate savings vs normal mode. The factor varies by model — Opus benefits more, Haiku less — so re-run the benchmark with higher `RUNS` to refresh it for your setup.
 
 ## Further token-saving tips
 
