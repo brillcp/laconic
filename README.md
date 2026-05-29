@@ -7,8 +7,6 @@
 [![license](https://img.shields.io/github/license/brillcp/laconic)](/LICENSE)
 ![stars](https://img.shields.io/github/stars/brillcp/laconic?style=social)
 
-Words cost. Cut. 
-
 Claude Code plugin. Spartan brevity. Inspired by [🪨 caveman](https://github.com/JuliusBrussee/caveman) — same goal, measured savings (see [Benchmarks](#benchmarks)).
 
 ## How it works
