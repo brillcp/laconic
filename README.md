@@ -17,6 +17,27 @@ Claude Code plugin. Spartan brevity. Inspired by [🪨 caveman](https://github.c
 
 ## Install
 
+### One-liner (all agents)
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/brillcp/laconic/main/install.sh | bash
+```
+
+Auto-detects every supported agent on your machine and installs laconic globally — no `/laconic` needed. Safe to re-run.
+
+**What it does:**
+- **Claude Code** → prints plugin install command (marketplace + install).
+- **Cursor** → writes `~/.cursor/rules/laconic.mdc` with `alwaysApply: true`.
+- **Windsurf** → appends rule block to `~/.codeium/windsurf/memories/global_rules.md`.
+- **Codex CLI** → appends to `~/.codex/instructions.md`.
+- **Aider** → updates `~/.aider.conf.yml`.
+- **Continue (VS Code)** → prints manual `systemMessage` snippet (JSON edits skipped for safety).
+- **Generic** → writes rule to `~/AGENTS.md` for any agent that respects it.
+
+Skips missing agents. Backs up every touched file as `<file>.laconic.bak`. Uses `# >>> laconic >>>` / `# <<< laconic <<<` markers so re-runs are idempotent. Remove the block to uninstall.
+
+### Claude Code only
+
 ```sh
 /plugin marketplace add brillcp/laconic
 /plugin install laconic@laconic
