@@ -62,7 +62,16 @@ Optional. Add to `~/.claude/settings.json`:
 }
 ```
 
-Shows `🪙 LACONIC` in the status bar while plugin is active.
+Shows `🪙 LACONIC · ~N tokens saved` live in the status bar — counter reads the session transcript and applies the measured `1.74` expansion factor to estimate savings vs normal mode.
+
+## Further token-saving tips
+
+Laconic trims output tokens. To trim more:
+
+- **Default to Haiku** for routine tasks (~5× cheaper than Opus). Set `"model": "claude-haiku-4-5-20251001"` in `~/.claude/settings.json`. Switch mid-session with `/model opus`.
+- **Audit plugins** with `/laconic:audit` — every enabled plugin loads tool/skill metadata each turn.
+- **Trim** verbose `CLAUDE.md` files, skill `description:` fields, and hook output — they ride every request.
+- **Read narrowly**: `Grep -n pattern file` or `Read offset:100 limit:50` over reading whole files. Use sub-agents for noisy searches so their context stays isolated.
 
 ## Update
 
