@@ -1,10 +1,15 @@
 # [Laconic 🪙](https://en.wikipedia.org/wiki/Laconic_phrase)
 
+
+*from Laconia (Sparta). Spartan speech style: maximum meaning, minimum words.*
+
 ![release](https://img.shields.io/github/v/release/brillcp/laconic)
 [![license](https://img.shields.io/github/license/brillcp/laconic)](/LICENSE)
 ![stars](https://img.shields.io/github/stars/brillcp/laconic?style=social)
 
-Claude Code plugin. Spartan brevity. Drop articles, filler, hedging. Inspired by [🪨 caveman](https://github.com/JuliusBrussee/caveman) — same goal, measured savings (see [Benchmarks](#benchmarks)).
+Words cost. Cut. 
+
+Claude Code plugin. Spartan brevity. Inspired by [🪨 caveman](https://github.com/JuliusBrussee/caveman) — same goal, measured savings (see [Benchmarks](#benchmarks)).
 
 ## How it works
 
