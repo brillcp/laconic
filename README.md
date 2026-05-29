@@ -34,6 +34,14 @@ Adds the marketplace and enables the plugin in `~/.claude/settings.json`. Restar
 
 Then `/reload-plugins` (or restart Claude Code).
 
+### Uninstall
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/brillcp/laconic/main/uninstall.sh | bash
+```
+
+Removes the marketplace + disables the plugin in `~/.claude/settings.json`. Backup written as `settings.json.laconic.bak`.
+
 ## Use
 
 - `/laconic <prompt>` — reinforce mode mid-session
