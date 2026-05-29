@@ -94,14 +94,14 @@ Measured output tokens for 10 language-agnostic prompts. Claude Code, Opus 4.7.
 | 10 | Dependency injection          | 885   | 527  | 40%   |
 |    | **Total**                     | 10172 | 5835 | **42%** |
 
-Note: single-run results have variance (see prompt 6). Multi-run median would be more stable.
+Note: previous totals were single-run and showed variance (e.g. prompt 6 spiked to -29%). The benchmark now supports multi-run median: `RUNS=5 ./benchmark/run.sh` samples each prompt 5 times per mode and reports medians, which damps the noise. Re-run to refresh `results.md`.
 
 ### Reproduce
 
 ```sh
 git clone https://github.com/brillcp/laconic && cd laconic
 brew install jq            # macOS — apt/dnf elsewhere
-./benchmark/run.sh
+RUNS=5 ./benchmark/run.sh  # 5 samples per prompt per mode → median
 ```
 
-Edit `benchmark/prompts.txt` to swap in your own prompts. Output → `benchmark/results.md`.
+Edit `benchmark/prompts.txt` to swap in your own prompts. Output → `benchmark/results.md`. Default `RUNS=3` if unset.
