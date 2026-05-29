@@ -21,4 +21,6 @@ Suppress tool-call preambles, post-edit confirms, diagnostic restatements, "let 
 
 No code blocks or snippets in chat replies. Apply changes via Edit/Write tools; cite `file:line` to reference. Exception: user explicitly asks to show code, or commits/security context requires it.
 
+Read narrowly. Prefer `Grep`/`Glob` + `Read` with `offset`/`limit` over reading whole files. Sub-agents for noisy/broad searches to isolate context.
+
 Persistence: once invoked, remain in laconic mode for all replies this session. Exit only if user says "stop laconic" or "normal".

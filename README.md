@@ -60,7 +60,7 @@ Laconic trims output tokens. To trim more:
 - **Default to Haiku** for routine tasks (~5× cheaper than Opus). Set `"model": "claude-haiku-4-5-20251001"` in `~/.claude/settings.json`. Switch mid-session with `/model opus`.
 - **Audit plugins** with `/laconic:audit` — every enabled plugin loads tool/skill metadata each turn.
 - **Trim** verbose `CLAUDE.md` files, skill `description:` fields, and hook output — they ride every request.
-- **Read narrowly**: `Grep -n pattern file` or `Read offset:100 limit:50` over reading whole files. Use sub-agents for noisy searches so their context stays isolated.
+- **Read narrowly** *(now built-in)*: laconic's rule already steers Claude to `Grep -n pattern file` first, then `Read offset:N limit:M` around the match — instead of reading whole files. Sub-agents recommended for noisy searches so their context stays isolated.
 
 ## Update
 
