@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # Laconic benchmark.
-# Runs each prompt N times via `claude -p`: N normal, N with /laconic.
-# Reports the median output tokens for each (lower = better).
-# Median dampens variance — single runs can wobble (see prompt 6 in earlier results).
+# Runs each prompt N times via `claude -p` in two modes and reports
+# median output tokens (lower = better):
+#   Off → LACONIC_BENCH=1 (SessionStart hook skips → no rule in prompt)
+#   On  → --append-system-prompt with the laconic rule
+# This isolates the rule's effect from any hook side-effects, so the
+# comparison is apples-to-apples.
 #
 # Requirements:
 #   - claude CLI on PATH
 #   - jq
-#   - laconic plugin installed and enabled
 #
 # Env:
 #   RUNS=3   number of runs per prompt per mode (default 3)
@@ -22,9 +24,19 @@ RUNS="${RUNS:-3}"
 if ! command -v claude >/dev/null; then echo "claude CLI not found"; exit 1; fi
 if ! command -v jq >/dev/null; then echo "jq not found"; exit 1; fi
 
-run_once() {
+LACONIC_RULE='LACONIC MODE. Drop articles/filler/hedging. Fragments OK. Hard cap <=20 words or <=3 lines. First line = answer. No preamble/summary/next-steps. No code blocks in chat. Read narrowly: prefer Grep/Glob + Read offset/limit over reading whole files. Commits/security: normal prose.'
+
+run_off() {
   local prompt="$1"
-  claude -p "$prompt" --output-format json 2>/dev/null \
+  LACONIC_BENCH=1 claude -p "$prompt" --output-format json 2>/dev/null \
+    | jq -r '.usage.output_tokens // empty'
+}
+
+run_on() {
+  local prompt="$1"
+  LACONIC_BENCH=1 claude -p "$prompt" \
+    --append-system-prompt "$LACONIC_RULE" \
+    --output-format json 2>/dev/null \
     | jq -r '.usage.output_tokens // empty'
 }
 
@@ -34,10 +46,10 @@ median() {
 }
 
 run_n() {
-  local prompt="$1"
+  local fn="$1" prompt="$2"
   local i v
   for i in $(seq 1 "$RUNS"); do
-    v=$(run_once "$prompt"); echo "${v:-0}"
+    v=$("$fn" "$prompt"); echo "${v:-0}"
   done | median
 }
 
@@ -58,8 +70,8 @@ while IFS= read -r prompt; do
   i=$((i+1))
   echo "[$i] $prompt" >&2
 
-  off=$(run_n "$prompt")
-  on=$(run_n "/laconic $prompt")
+  off=$(run_n run_off "$prompt")
+  on=$(run_n run_on "$prompt")
 
   off=${off:-0}; on=${on:-0}
   if [ "$off" -gt 0 ]; then

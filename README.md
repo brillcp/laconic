@@ -47,6 +47,7 @@ Removes the marketplace + disables the plugin in `~/.claude/settings.json`. Back
 - `/laconic <prompt>` — reinforce mode mid-session
 - `/laconic:stats` — estimate tokens saved this session
 - `/laconic:audit` — list enabled plugins, flag unused ones, prompt before disabling
+- `/laconic:benchmark` — run the benchmark from anywhere and print the full results table in the CLI (pass `RUNS=N` for more samples)
 
 ## Statusline indicator
 
